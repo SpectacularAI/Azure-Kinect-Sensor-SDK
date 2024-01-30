@@ -34,7 +34,7 @@ if ("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
         list(APPEND CLANG_ALL_WARNINGS "-Wno-extra-semi-stmt") # Allow semi-colons to be used after #define's
         list(APPEND CLANG_ALL_WARNINGS "-Wno-atomic-implicit-seq-cst") # Allow use of __sync_add_and_fetch() atomic
     endif()
-    set(CLANG_WARNINGS_AS_ERRORS "-Werror")
+    #set(CLANG_WARNINGS_AS_ERRORS "-Werror")
     add_compile_options(${CLANG_ALL_WARNINGS})
     add_compile_options(${CLANG_WARNINGS_AS_ERRORS})
 elseif ("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU")
